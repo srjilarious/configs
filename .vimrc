@@ -30,6 +30,7 @@ set autochdir	" Change working directory to open buffer
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
 
+set t_Co=256    " Forces 256 colors for color schemes
 set syntax=auto
 set background=dark
 colo molokai  
