@@ -1,9 +1,0 @@
-# My extra bash goodies
-
-test -n "$PS1" && bind TAB:menu-complete
-
-# Load in the git branch prompt script.
-source ~/.git-prompt.sh
-
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;35m\]$(__git_ps1)\[\033[00m\]\n\[\033[36m\]\t: \[\033[01;34m\]\w\[\033[00m\] \$ '
-

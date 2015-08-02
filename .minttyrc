@@ -1,0 +1,30 @@
+BoldAsFont=yes
+Transparency=low
+Font=Consolas
+FontHeight=12
+FontSmoothing=full
+AllowBlinking=yes
+OpaqueWhenFocused=yes
+CursorType=block
+
+# Based on base16-monokai-mod from: 
+# https://github.com/oumu/mintty-color-schemes
+ForegroundColour=248,248,242
+BackgroundColour=39,40,34
+CursorColour=253,157,79
+Black=39,40,34
+BoldBlack=117,113,94
+Red=180,6,78
+BoldRed=249,38,114
+Green=102,172,24
+BoldGreen=146,226,40
+Yellow=220,149,59
+BoldYellow=244,191,117
+Blue=33,159,243
+BoldBlue=102,187,250
+Magenta=126,51,255
+BoldMagenta=174,129,255
+Cyan=75,197,180
+BoldCyan=161,239,228
+White=248,248,242
+BoldWhite=249,248,245

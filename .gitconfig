@@ -1,8 +1,8 @@
 [alias]
     st = status
     co = checkout
-	log-nice = log --graph --decorate --pretty=oneline --abbrev-commit
-	lg = log --color --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    log-nice = log --graph --decorate --pretty=oneline --abbrev-commit
+    lg = log --color --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [color]
     ui = true
@@ -10,4 +10,4 @@
     diff = true
 
 [core]
-	autocrlf = input
+    autocrlf = input
