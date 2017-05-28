@@ -12,4 +12,7 @@
 	default = simple
 [core]
     autocrlf = input
-	editor = nvim
+    editor = nvim
+[user]
+    email = "sr.jilarious@fastmail.net"
+    name = "Jeff DeWall"
