@@ -1,1 +1,0 @@
-C:\Windows\System32\wscript.exe C:\tools\Git\GitMinTTY.js

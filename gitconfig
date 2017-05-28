@@ -8,6 +8,8 @@
     ui = true
     interative = true
     diff = true
-
+[push]
+	default = simple
 [core]
     autocrlf = input
+	editor = nvim

@@ -4,6 +4,7 @@
 alias ls='ls -C --color'
 alias ll='ls -l'
 alias la='ls -A'
+alias lal='ls -la'
 
 test -n "$PS1" && bind TAB:menu-complete
 
@@ -22,3 +23,5 @@ fast_git_ps1 ()
 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;35m\]$(fast_git_ps1)\[\033[00m\]\n\[\033[36m\]\t: \[\033[01;34m\]\w\[\033[00m\] \$ '
 
+#alias jcode='cd /d/code'
+alias tmux='TERM=xterm-256color tmux'
