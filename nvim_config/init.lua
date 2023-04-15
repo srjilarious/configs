@@ -3,8 +3,32 @@ vim.api.nvim_set_keymap('i', '<M-k>', '<Esc>:m .-2<CR>gi', { noremap = true, sil
 vim.api.nvim_set_keymap('i', '<M-j>', '<Esc>:m .+1<CR>gi', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<M-k>', '<Esc>:m .-2<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<M-j>', '<Esc>:m .+1<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<M-k>', ":m '<-2<CR>gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<M-j>', ":m '>+1<CR>gv", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('v', '<M-k>', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('v', '<M-j>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('v', '<M-k>', "<Esc>:lua MoveBlockUp()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<M-j>', "<Esc>:lua MoveBlockDown()<CR>", { noremap = true, silent = true })
+
+local function move_block_up()
+    local start_line = vim.fn.line("'<")
+    local end_line = vim.fn.line("'>")
+    if start_line == 1 then return end
+    vim.cmd("silent! normal! " .. (start_line-1) .. "Gdd")
+    vim.cmd("silent! normal! " .. (end_line-1) .. "Gp")
+    vim.cmd("silent! normal! " .. (start_line-1) .. "GV" .. (end_line-1) .. "G")
+end
+
+local function move_block_down()
+    local start_line = vim.fn.line("'<")
+    local end_line = vim.fn.line("'>")
+    if end_line == vim.fn.line("$") then return end
+    vim.cmd("silent! normal! " .. (end_line+1) .. "Gdd")
+    vim.cmd("silent! normal! " .. start_line-1 .. "Gp")
+    vim.cmd("silent! normal! " .. (start_line+1) .. "GV" .. (end_line+1) .. "G")
+end
+
+_G.MoveBlockUp = move_block_up
+_G.MoveBlockDown = move_block_down
 
 -- Telescope find files
 vim.api.nvim_set_keymap('n', '<C-p>', "<cmd>Telescope find_files<cr>", { noremap = true, silent = true })
