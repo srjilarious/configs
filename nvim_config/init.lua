@@ -3,8 +3,6 @@ vim.api.nvim_set_keymap('i', '<M-k>', '<Esc>:m .-2<CR>gi', { noremap = true, sil
 vim.api.nvim_set_keymap('i', '<M-j>', '<Esc>:m .+1<CR>gi', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<M-k>', '<Esc>:m .-2<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<M-j>', '<Esc>:m .+1<CR>', { noremap = true, silent = true })
--- vim.api.nvim_set_keymap('v', '<M-k>', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
--- vim.api.nvim_set_keymap('v', '<M-j>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap('v', '<M-k>', "<Esc>:lua MoveBlockUp()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<M-j>', "<Esc>:lua MoveBlockDown()<CR>", { noremap = true, silent = true })
@@ -45,6 +43,10 @@ vim.api.nvim_set_keymap('i', '<C-Tab>', '<Esc>:bnext<CR>gi', {noremap = true, si
 vim.api.nvim_set_keymap('n', '<C-S-Tab>', ':bprevious<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', '<C-S-Tab>', '<Esc>:bprevious<CR>gi', {noremap = true, silent = true})
 
+-- Shift Tab should unindent in insert/normal mode.
+vim.api.nvim_set_keymap('n', '<S-Tab>', '<<', {silent = true})
+vim.api.nvim_set_keymap('i', '<S-Tab>', '<C-d>', {silent = true})
+
 vim.api.nvim_set_keymap('n', '<C-_>', ':VimwikiIncrementListItem<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-Bslash>', ':VimwikiDecrementListItem<CR>', {noremap = true, silent = true})
 
@@ -75,6 +77,10 @@ return {
       init = function () --replace 'config' with 'init'
         vim.g.vimwiki_list = {{path = '~/code/tech-notes/wiki', syntax = 'markdown', ext = '.md'}}
         vim.g.vimwiki_listsyms = " ○◐●✓"
+        vim.api.nvim_set_keymap('n', '<C-]>', '<Plug>VimwikiNextLink', {silent=true})
+        vim.api.nvim_set_keymap('n', '<C-[>', '<Plug>VimwikiPrevLink', {silent=true})
+        vim.api.nvim_set_keymap('n', '<S-Tab>', '<Plug>VimwikiDecreaseLvlWholeItem', {silent=true})
+        vim.api.nvim_set_keymap('n', '<Tab>', '<Plug>VimwikiIncreaseLvlWholeItem', {silent=true})
       end,
     },
     {
@@ -119,7 +125,16 @@ return {
         return opts
       end,
     },
+    {
+        'lukas-reineke/headlines.nvim',
+        event = "BufEnter *.md",
+        dependencies = "nvim-treesitter/nvim-treesitter",
+        config = true, -- or `opts = {}`
+        lazy=false,
+    },
     { import = "astrocommunity.pack.rust" },
+    { import = "astrocommunity.pack.markdown" },
+    -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
     { import = "astrocommunity.colorscheme.kanagawa", lazy=false},
     { import = "astrocommunity.colorscheme.catppuccin", lazy = false},
     { import = "astrocommunity.colorscheme.oxocarbon", lazy=false},
