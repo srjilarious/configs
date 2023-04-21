@@ -28,6 +28,38 @@ end
 _G.MoveBlockUp = move_block_up
 _G.MoveBlockDown = move_block_down
 
+-- Duplicate lines keymappings
+vim.api.nvim_set_keymap('i', '<M-S-k>', '<Esc>:t .-1<CR>gi', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<M-S-j>', '<Esc>:t .<CR>gi', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<M-S-k>', '<Esc>:t .-1<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<M-S-j>', '<Esc>:t .<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('v', '<M-S-k>', "<Esc>:lua CopyBlockUp()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<M-S-j>', "<Esc>:lua CopyBlockDown()<CR>", { noremap = true, silent = true })
+
+local function copy_block_up()
+    local start_line = vim.fn.line("'<")
+    local end_line = vim.fn.line("'>")
+    local lines_to_duplicate = vim.api.nvim_buf_get_lines(0, start_line - 1, end_line, false)
+    vim.api.nvim_buf_set_lines(0, end_line, end_line, false, lines_to_duplicate)
+    local new_end_line = end_line + (end_line-start_line) + 1
+    vim.cmd("silent! normal! " .. end_line+1 .. "GV" .. new_end_line .. "G")
+end
+
+local function copy_block_down()
+    local start_line = vim.fn.line("'<")
+    local end_line = vim.fn.line("'>")
+
+    local lines_to_duplicate = vim.api.nvim_buf_get_lines(0, start_line - 1, end_line, false)
+    vim.api.nvim_buf_set_lines(0, end_line, end_line, false, lines_to_duplicate)
+    vim.cmd("silent! normal! " .. start_line .. "GV" .. end_line .. "G")
+
+end
+
+_G.CopyBlockUp = copy_block_up
+_G.CopyBlockDown = copy_block_down
+
+
 -- Telescope find files
 vim.api.nvim_set_keymap('n', '<C-p>', "<cmd>Telescope find_files<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-p>', "<Esc><cmd>Telescope find_files<cr><gi>", { noremap = true, silent = true })
