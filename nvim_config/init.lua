@@ -82,6 +82,14 @@ vim.api.nvim_set_keymap('i', '<S-Tab>', '<C-d>', {silent = true})
 vim.api.nvim_set_keymap('n', '<C-_>', ':VimwikiIncrementListItem<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-Bslash>', ':VimwikiDecrementListItem<CR>', {noremap = true, silent = true})
 
+vim.api.nvim_set_keymap('i', '<C-s>', '<C-o>:w<CR>', { noremap = true, silent = true })
+
+-- Start visual selection on ctrl+shift+left/right
+vim.api.nvim_set_keymap('i', '<C-S-Left>', 'vge', {noremap = true})
+vim.api.nvim_set_keymap('i', '<C-S-Right>', 'v<Space>w', {noremap = true})
+vim.api.nvim_set_keymap('n', '<C-S-Left>', 'vge', {noremap = true})
+vim.api.nvim_set_keymap('n', '<C-S-Right>', 'v<Space>w', {noremap = true})
+
 -- Enter the current directory when vim starts
 -- % curr file, :p full path, :h get dir
 local file_path = vim.fn.expand("%p")
