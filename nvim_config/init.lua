@@ -169,20 +169,20 @@ return {
         return opts
       end,
     },
-    {
-        'lukas-reineke/headlines.nvim',
-        event = "BufEnter *.md",
-        dependencies = "nvim-treesitter/nvim-treesitter",
-        config = true, -- or `opts = {}`
-        lazy=false,
-    },
+    -- {
+    --     'lukas-reineke/headlines.nvim',
+    --     event = "BufEnter *.md",
+    --     dependencies = "nvim-treesitter/nvim-treesitter",
+    --     config = true, -- or `opts = {}`
+    --     lazy=false,
+    -- },
     { import = "astrocommunity.pack.rust" },
     { import = "astrocommunity.pack.markdown" },
     -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
-    { import = "astrocommunity.colorscheme.kanagawa", lazy=false},
+    { import = "astrocommunity.colorscheme.kanagawa-nvim", lazy=false},
     { import = "astrocommunity.colorscheme.catppuccin", lazy = false},
-    { import = "astrocommunity.colorscheme.oxocarbon", lazy=false},
-    { import = "astrocommunity.colorscheme.nightfox", lazy=false},
+    { import = "astrocommunity.colorscheme.oxocarbon-nvim", lazy=false},
+    { import = "astrocommunity.colorscheme.nightfox-nvim", lazy=false},
     { import = "astrocommunity.motion.leap-nvim"},
   },
   colorscheme = "kanagawa"
