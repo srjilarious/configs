@@ -59,6 +59,49 @@ end
 _G.CopyBlockUp = copy_block_up
 _G.CopyBlockDown = copy_block_down
 
+-- Function to move buffer to next window
+function MoveBufferToLeftWindow()
+  -- Save the current buffer number
+  local bufnr = vim.api.nvim_get_current_buf()
+
+  -- Move to the right window
+  vim.api.nvim_command('wincmd h')
+
+  -- If successful, open the buffer in this window and create a new one in the original window
+  if vim.api.nvim_get_current_buf() ~= bufnr then
+    vim.api.nvim_command('buffer ' .. bufnr)
+
+    -- Move back to the original window
+    vim.api.nvim_command('wincmd l')
+  end
+end
+
+-- Function to move buffer to next window
+function MoveBufferToRightWindow()
+  -- Save the current buffer number
+  local bufnr = vim.api.nvim_get_current_buf()
+
+  -- Move to the right window
+  vim.api.nvim_command('wincmd l')
+
+  -- If successful, open the buffer in this window and create a new one in the original window
+  if vim.api.nvim_get_current_buf() ~= bufnr then
+    vim.api.nvim_command('buffer ' .. bufnr)
+
+    -- Move back to the original window
+    vim.api.nvim_command('wincmd h')
+  end
+end
+
+-- Create a command to call the function
+_G.MoveCurrBufferToLeft = MoveBufferToLeftWindow
+_G.MoveCurrBufferToRight = MoveBufferToRightWindow
+
+vim.api.nvim_set_keymap('n', '<M-S-h>', "<Esc>:lua MoveCurrBufferToLeft()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<M-S-h>', "<Esc>:lua MoveCurrBufferToLeft()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<M-S-l>', "<Esc>:lua MoveCurrBufferToRight()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<M-S-l>', "<Esc>:lua MoveCurrBufferToRight()<CR>", { noremap = true, silent = true })
+
 
 -- Telescope find files
 vim.api.nvim_set_keymap('n', '<C-p>', "<cmd>Telescope find_files<cr>", { noremap = true, silent = true })
