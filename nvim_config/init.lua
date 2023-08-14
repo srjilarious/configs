@@ -221,13 +221,45 @@ return {
     -- },
     { import = "astrocommunity.pack.rust" },
     { import = "astrocommunity.pack.markdown" },
-    -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
-    { import = "astrocommunity.colorscheme.kanagawa-nvim", lazy=false},
-    { import = "astrocommunity.colorscheme.catppuccin", lazy = false},
-    { import = "astrocommunity.colorscheme.oxocarbon-nvim", lazy=false},
-    { import = "astrocommunity.colorscheme.nightfox-nvim", lazy=false},
     { import = "astrocommunity.motion.leap-nvim"},
+    -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+
+    -- Color schemes
+    { "Mofiqul/vscode.nvim", lazy = false, },
+    { "projekt0n/github-nvim-theme", lazy = false, },
+    { "cocopon/iceberg.vim", lazy = false, },
+    { "folke/tokyonight.nvim", lazy = false, },
+    { "rebelot/kanagawa.nvim", lazy = false, },
+    { "sainnhe/sonokai", lazy = false,
+      init = function() vim.g.sonokai_dim_inactive_windows = 1 end,
+    },
+    { "nyoom-engineering/oxocarbon.nvim", lazy = false, },
+    {
+      "EdenEast/nightfox.nvim",
+      lazy = false,
+      opts = {
+        options = {
+          module_default = false,
+          modules = {
+            aerial = true,
+            cmp = true,
+            ["dap-ui"] = true,
+            dashboard = true,
+            diagnostic = true,
+            gitsigns = true,
+            native_lsp = true,
+            neotree = true,
+            notify = true,
+            symbol_outline = true,
+            telescope = true,
+            treesitter = true,
+            whichkey = true,
+          },
+        },
+        groups = { all = { NormalFloat = { link = "Normal" } } },
+      }
+    },
   },
-  colorscheme = "kanagawa"
+  colorscheme = "vscode"
 }
 
