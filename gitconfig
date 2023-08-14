@@ -3,7 +3,8 @@
     co = checkout
     log-nice = log --graph --decorate --pretty=oneline --abbrev-commit
     lg = log --color --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-
+    mergeff = merge --ff-only
+    
 [color]
     ui = true
     interative = true
