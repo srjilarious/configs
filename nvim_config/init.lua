@@ -113,10 +113,10 @@ vim.api.nvim_set_keymap('i', '<C-b>', "<Esc><cmd>Telescope buffers<cr><gi>", { n
 
 
 -- Switch to the buffers using Ctrl+(Shift+)Tab
-vim.api.nvim_set_keymap('n', '<C-Tab>', ':bnext<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', '<C-Tab>', '<Esc>:bnext<CR>gi', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-S-Tab>', ':bprevious<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', '<C-S-Tab>', '<Esc>:bprevious<CR>gi', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-Tab>', ':lua require("astronvim.utils.buffer").nav(1)<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<C-Tab>', '<Esc>:lua require("astronvim.utils.buffer").nav(1)<CR>gi', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-S-Tab>', ':lua require("astronvim.utils.buffer").nav(-1)<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<C-S-Tab>', '<Esc>:lua require("astronvim.utils.buffer").nav(-1)<CR>gi', {noremap = true, silent = true})
 
 -- Shift Tab should unindent in insert/normal mode.
 vim.api.nvim_set_keymap('n', '<S-Tab>', '<<', {silent = true})
@@ -127,9 +127,13 @@ vim.api.nvim_set_keymap('n', '<C-Bslash>', ':VimwikiDecrementListItem<CR>', {nor
 
 vim.api.nvim_set_keymap('i', '<C-s>', '<C-o>:w<CR>', { noremap = true, silent = true })
 
+-- Change visual mode paste to not copy the overwritten portion into the clipboard register
+-- Instead delete the contents into the black hole register "_ and then paste.
+vim.api.nvim_set_keymap('v', 'p', '"_dP', { noremap = true, silent = true })
+
 -- Start visual selection on ctrl+shift+left/right
-vim.api.nvim_set_keymap('i', '<C-S-Left>', 'vge', {noremap = true})
-vim.api.nvim_set_keymap('i', '<C-S-Right>', 'v<Space>w', {noremap = true})
+vim.api.nvim_set_keymap('i', '<C-S-Left>', '<Esc>vge', {noremap = true})
+vim.api.nvim_set_keymap('i', '<C-S-Right>', '<Esc>v<Space>w', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-S-Left>', 'vge', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-S-Right>', 'v<Space>w', {noremap = true})
 
@@ -152,6 +156,16 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.expandtab = true
 vim.opt.softtabstop = 4
+
+local utils = require "astronvim.utils"
+function remove_val(tbl, val)
+  for k, v in pairs(tbl) do
+    if v == val then
+      table.remove(tbl, k)
+      return
+    end
+  end
+end
 
 return {
   plugins = {
@@ -212,18 +226,50 @@ return {
         return opts
       end,
     },
-    -- {
-    --     'lukas-reineke/headlines.nvim',
-    --     event = "BufEnter *.md",
-    --     dependencies = "nvim-treesitter/nvim-treesitter",
-    --     config = true, -- or `opts = {}`
-    --     lazy=false,
-    -- },
-    { import = "astrocommunity.pack.rust" },
-    { import = "astrocommunity.pack.markdown" },
+    {
+      "chaoren/vim-wordmotion", 
+      lazy = false,
+      enabled = true, 
+    },
+    {
+      "nvim-treesitter/nvim-treesitter",
+      opts = function(_, opts)
+        if opts.ensure_installed ~= "all" then
+          opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {
+            "cmake",
+            "elixir", 
+            "eex", 
+            "heex", 
+            "lua", 
+            "verilog",
+            "zig"
+          })
+        end
+      end,
+    },
     { import = "astrocommunity.motion.leap-nvim"},
+    { import = "astrocommunity.pack.cpp" },
+    { import = "astrocommunity.pack.rust" },
+    { import = "astrocommunity.pack.python" },
+    {
+      "williamboman/mason-lspconfig.nvim",
+      opts = function(_, opts)
+        opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "ruff_lsp", "verible" })
+        -- I don't want pyright from the python pack installed.
+        remove_val(opts.ensure_installed, "pyright")
+        -- print(vim.inspect(opts.ensure_installed))
+      end,
+    },
+    {
+      "jay-babu/mason-null-ls.nvim",
+      opts = function(_, opts)
+        opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "yapf", "isort" })
+        remove_val(opts.ensure_installed, "black")
+      end,
+    },
+    { import = "astrocommunity.pack.markdown" },
     -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
-
+    
     -- Color schemes
     { "Mofiqul/vscode.nvim", lazy = false, },
     { "projekt0n/github-nvim-theme", lazy = false, },
