@@ -4,7 +4,7 @@
     bl = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
     co = checkout
     cob = checkout -b
-    com = checkout -m
+    com = commit -m
     log-nice = log --graph --decorate --pretty=oneline --abbrev-commit
     lg = log --color --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     mergeff = merge --ff-only
