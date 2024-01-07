@@ -28,6 +28,7 @@
 [core]
     autocrlf = input
     editor = nvim
+    #pager = delta
 [user]
     email = "sr.jilarious@fastmail.net"
     name = "Jeff DeWall"

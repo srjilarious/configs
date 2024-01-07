@@ -137,6 +137,19 @@ vim.api.nvim_set_keymap('i', '<C-S-Right>', '<Esc>v<Space>w', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-S-Left>', 'vge', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-S-Right>', 'v<Space>w', {noremap = true})
 
+
+-- Setup loading the DAP configuration from the local .vscode/launch.json on entering a directory
+local function on_directory_change()
+    -- print("Changed directory to: " .. vim.fn.getcwd())
+    -- Tell nvim-dap to try loading dap configs from .vscode/launch.json
+    require('dap.ext.vscode').load_launchjs(nil, {})
+end
+
+vim.api.nvim_create_autocmd("DirChanged", {
+    pattern = "*",
+    callback = on_directory_change,
+})
+
 -- Enter the current directory when vim starts
 -- % curr file, :p full path, :h get dir
 local file_path = vim.fn.expand("%p")
@@ -148,6 +161,9 @@ else
   vim.api.nvim_create_autocmd("VimEnter", {pattern = "*", command = "silent! cd %:p:h"})
   vim.api.nvim_create_autocmd("VimEnter", {pattern = "*", command = "TermExec open=0 cmd='cd %:p:h && clear'"})
 end
+
+-- Try to load the launch.json once init is done.
+--vim.api.nvim_create_autocmd("VimEnter", {pattern = "*", callback = on_directory_change()})
 
 vim.opt.list = true
 vim.opt.listchars:append({space = "·", lead = "·", tab = "» ", trail = "·"}) --, trail = '·', setbreak = "···", space = '·' }
@@ -167,8 +183,27 @@ function remove_val(tbl, val)
   end
 end
 
+
 return {
-  plugins = {
+   -- dap = {
+   --  adapters = {
+   --    zig = {
+   --      type = "executable",
+   --      command = "/usr/bin/lldb-vscode",
+   --    },
+   --  },
+   --  configurations = {
+   --    zig = {
+   --      {
+   --        type = "zig",
+   --        request = "launch",
+   --        name = "Debug w/ Zig",
+   --        program = "${file}"
+   --      }
+   --    },
+   --  },
+   -- }, 
+   plugins = {
     "AstroNvim/astrocommunity",
     {
       'vimwiki/vimwiki',
@@ -262,6 +297,7 @@ return {
     { import = "astrocommunity.motion.leap-nvim"},
     { import = "astrocommunity.pack.cpp" },
     { import = "astrocommunity.pack.rust" },
+    { import = "astrocommunity.pack.zig" },
     { import = "astrocommunity.pack.python" },
     {
       "williamboman/mason-lspconfig.nvim",
@@ -317,7 +353,25 @@ return {
         groups = { all = { NormalFloat = { link = "Normal" } } },
       }
     },
+    {
+      "jay-babu/mason-nvim-dap.nvim",
+      opts = {
+        handlers = {
+          python = function(source_name)
+            local dap = require "dap"
+            dap.adapters.zig = {
+              type = "executable",
+              command = "/usr/bin/lldb-vscode",
+              args = {},
+            }
+
+            on_directory_change()
+          end,
+        },
+      },
+    },
   },
-  colorscheme = "vscode"
+  colorscheme = "vscode",
+
 }
 
