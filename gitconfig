@@ -12,6 +12,7 @@
     d = diff
     dc = diff --cached
     poh = push origin HEAD
+    pom = push origin main
     cloner = clone --recursive
 [diff]
     tool = nvimdiff
