@@ -183,6 +183,11 @@ function remove_val(tbl, val)
   end
 end
 
+vim.filetype.add({
+  extension = {
+    zon = "zig",
+  },
+})
 
 return {
    -- dap = {
