@@ -208,6 +208,15 @@ return {
    --    },
    --  },
    -- }, 
+   lsp = {
+     servers = { "zls" },
+     config = {
+       zls = {
+           cmd = {"/home/jeffdw/.zvm/bin/zls"},
+           filetypes = {"zig", "zon", "zir"},
+       },
+     },
+   },
    plugins = {
     "AstroNvim/astrocommunity",
     {
@@ -302,7 +311,8 @@ return {
     { import = "astrocommunity.motion.leap-nvim"},
     { import = "astrocommunity.pack.cpp" },
     { import = "astrocommunity.pack.rust" },
-    { import = "astrocommunity.pack.zig" },
+    { import = "astrocommunity.diagnostics.lsp_lines-nvim"},
+    { import = "astrocommunity.lsp.lsp-signature-nvim"},
     { import = "astrocommunity.pack.python" },
     {
       "williamboman/mason-lspconfig.nvim",
