@@ -342,6 +342,14 @@ return {
     { "sainnhe/sonokai", lazy = false,
       init = function() vim.g.sonokai_dim_inactive_windows = 1 end,
     },
+    {
+      "zootedb0t/citruszest.nvim",
+      lazy = false,
+      priority = 1000,
+    },
+    { "nanotech/jellybeans.vim", lazy = false },
+    { "NLKNguyen/papercolor-theme", lazy = false },
+    { "tomasr/molokai", lazy = false },
     { "nyoom-engineering/oxocarbon.nvim", lazy = false, },
     {
       "EdenEast/nightfox.nvim",
