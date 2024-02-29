@@ -162,6 +162,16 @@ else
   vim.api.nvim_create_autocmd("VimEnter", {pattern = "*", command = "TermExec open=0 cmd='cd %:p:h && clear'"})
 end
 
+-- -- Override the background color
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--     pattern = "*",
+--     callback = function()
+--         vim.api.nvim_set_hl(0, 'Normal', { bg = '#000000' })
+--         vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#111111' })
+--
+--     end
+-- })
+
 -- Try to load the launch.json once init is done.
 --vim.api.nvim_create_autocmd("VimEnter", {pattern = "*", callback = on_directory_change()})
 
@@ -334,7 +344,16 @@ return {
     -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
     
     -- Color schemes
-    { "Mofiqul/vscode.nvim", lazy = false, },
+    { "Mofiqul/vscode.nvim", lazy = false, 
+      opts = {
+        color_overrides = {
+          vscBack = '#0a0a0a',
+          vscPopupBack = '#141414',
+          vscSelection = '#163F68',
+          vscDimHighlight = '#21201F'
+        }
+      }
+    },
     { "projekt0n/github-nvim-theme", lazy = false, },
     { "cocopon/iceberg.vim", lazy = false, },
     { "folke/tokyonight.nvim", lazy = false, },
