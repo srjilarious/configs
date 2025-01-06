@@ -1,0 +1,112 @@
+{
+    "editor.fontFamily": "'DejaVuSansMono Nerd Font Mono'",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "cmake.configureOnOpen": false,
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.renderColons": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "elixirLS.suggestSpecs": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "workbench.colorTheme": "Default Dark+",
+    "git.openRepositoryInParentFolders": "never",
+    "editor.renderWhitespace": "all",
+    "workbench.activityBar.location": "hidden",
+    "zig.path": "zig",
+    "zig.zls.path": "zls",
+    "workbench.colorCustomizations": {
+        "sideBar.background": "#0a0a0a",
+        "editor.background": "#0a0a0a",
+    },
+    "debug.onTaskErrors":"abort",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+            "scope": ["keyword.checkbox-todo"],
+            "settings": {
+                "foreground": "#aaaaaa",
+                "fontStyle": "bold"
+            }
+            },
+            {
+            "scope": ["keyword.event"],
+            "settings": {
+                "foreground": "#6E3500",
+                "fontStyle": "bold"
+            }
+            },
+            {
+            "scope": ["keyword.checkbox-malformed"],
+            "settings": {
+                "foreground": "#FF00FF",
+                "fontStyle": "bold"
+            }
+            },
+            {
+            "scope": ["keyword.checkbox-right_now"],
+            "settings": {
+                "foreground": "#88aaFF",
+                "fontStyle": "bold"
+            }
+            },
+            {
+            "scope": ["keyword.checkbox-next"],
+            "settings": {
+                "foreground": "#88aaFF",
+                "fontStyle": "bold"
+            }
+            },
+            {
+            "scope": ["keyword.checkbox-migrated"],
+            "settings": {
+                "foreground": "#9370D8",
+                "fontStyle": "bold"
+            }
+            },
+            {
+            "scope": ["keyword.checkbox-waiting"],
+            "settings": {
+                "foreground": "#FFA500",
+                "fontStyle": "bold"
+            }
+            },
+            {
+            "scope": ["keyword.checkbox-done"],
+            "settings": {
+                "foreground": "#90EE90",
+                "fontStyle": "bold"
+            }
+            },
+            {
+            "scope": ["keyword.checkbox-strikethrough"],
+            "settings": {
+                "foreground": "#82d882",
+                "fontStyle": "bold"
+            }
+            },
+            {
+            "scope": ["keyword.strikethrough-text"],
+            "settings": {
+                "fontStyle": "italic",
+                "foreground": "#00000070",
+            }
+            },
+            {
+            "scope": ["keyword.bullet"],
+            "settings": {
+                "fontStyle": "bold"
+            }
+            }
+        ]
+        },
+        "debug.disassemblyView.showSourceCode": false,
+        "terminal.integrated.scrollback": 5000,
+        "terminal.integrated.persistentSessionScrollback": 1000
+}
