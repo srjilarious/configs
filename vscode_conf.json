@@ -15,15 +15,19 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Visual Studio Dark - C++",
     "git.openRepositoryInParentFolders": "never",
     "editor.renderWhitespace": "all",
     "workbench.activityBar.location": "hidden",
     "zig.path": "zig",
     "zig.zls.path": "zls",
     "workbench.colorCustomizations": {
-        "sideBar.background": "#0a0a0a",
-        "editor.background": "#0a0a0a",
+        "[Visual Studio Dark - C++]": {
+            "sideBar.background": "#0a0a0a",
+            "editor.background": "#0a0a0a",
+            "editorInlayHint.background": "#1e1e1e",
+            "editorInlayHint.foreground": "#6e6e1e"
+        },
     },
     "debug.onTaskErrors":"abort",
     "editor.tokenColorCustomizations": {
@@ -108,5 +112,18 @@
         },
         "debug.disassemblyView.showSourceCode": false,
         "terminal.integrated.scrollback": 5000,
-        "terminal.integrated.persistentSessionScrollback": 1000
+        "terminal.integrated.persistentSessionScrollback": 1000,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "task-journal.tags": [
+            "CHORE",
+            "FOLLOW_UP",
+            "MGMT"
+        ],
+        "screencastMode.fontSize": 36,
+        "screencastMode.keyboardOptions": {
+            "showKeys": false
+        },
+        "window.commandCenter": false,
+        "chat.commandCenter.enabled": false,
+        "workbench.layoutControl.enabled": false
 }

@@ -162,6 +162,16 @@ else
   vim.api.nvim_create_autocmd("VimEnter", {pattern = "*", command = "TermExec open=0 cmd='cd %:p:h && clear'"})
 end
 
+local function setup_buffers()
+    vim.opt.wrap = true
+    vim.opt.linebreak = true
+end
+
+-- Ensure the buffer setup function is called when AstroNvim is loaded
+vim.api.nvim_create_autocmd("VimEnter", {
+    callback = setup_buffers,
+})
+
 -- -- Override the background color
 -- vim.api.nvim_create_autocmd("VimEnter", {
 --     pattern = "*",
@@ -175,6 +185,8 @@ end
 -- Try to load the launch.json once init is done.
 --vim.api.nvim_create_autocmd("VimEnter", {pattern = "*", callback = on_directory_change()})
 
+vim.opt.wrap = true
+vim.opt.linebreak = true
 vim.opt.list = true
 vim.opt.listchars:append({space = "·", lead = "·", tab = "» ", trail = "·"}) --, trail = '·', setbreak = "···", space = '·' }
 vim.opt.showbreak = "↪  "

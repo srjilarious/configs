@@ -11,8 +11,10 @@
     rv = remote --verbose
     d = diff
     dc = diff --cached
+    dp = diff HEAD^..HEAD
     poh = push origin HEAD
     pom = push origin main
+    pwnsrp = push -f wns-rp dev
     cloner = clone --recursive
 [diff]
     tool = nvimdiff
