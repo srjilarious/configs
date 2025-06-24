@@ -1,0 +1,291 @@
+Config Version=1
+First Time=false
+Version=2.9.0
+
+[Archives]
+Supported Packers=tar,gzip,bzip2,lzma,xz,unzip,zip,cbz,lha,unrar,arj,unarj,7z
+
+[Colors]
+Alternate Background=19,22,65
+Background=11,16,36
+KDE Default=false
+
+[Dependencies]
+7z=/usr/bin/7z
+arj=/usr/bin/arj
+bzip2=/usr/bin/bzip2
+checksum utility=/usr/bin/md5sum
+diff utility=/usr/bin/kdiff3
+gzip=/usr/bin/gzip
+kdiff3=/usr/bin/kdiff3
+kompare=/usr/bin/kompare
+krename=/usr/bin/krename
+lha=/usr/bin/lha
+lzma=/usr/bin/lzma
+md5sum=/usr/bin/md5sum
+mount=/usr/bin/mount
+rm=/usr/bin/rm
+sha1sum=/usr/bin/sha1sum
+sha224sum=/usr/bin/sha224sum
+sha256sum=/usr/bin/sha256sum
+sha384sum=/usr/bin/sha384sum
+sha512sum=/usr/bin/sha512sum
+tar=/usr/bin/tar
+umount=/usr/bin/umount
+unarj=/usr/bin/unarj
+unrar=/usr/bin/unrar
+unzip=/usr/bin/unzip
+xz=/usr/bin/xz
+zip=/usr/bin/zip
+
+[KPropertiesDialog]
+1920x1080 screen: Height=458
+1920x1080 screen: Width=393
+
+[KTextEditor Document]
+Allow End of Line Detection=true
+Auto Detect Indent=true
+Auto Reload If State Is In Version Control=true
+Auto Save=false
+Auto Save Interval=0
+Auto Save On Focus Out=false
+BOM=false
+Backup Local=false
+Backup Prefix=
+Backup Remote=false
+Backup Suffix=~
+Camel Cursor=true
+Encoding=UTF-8
+End of Line=0
+Indent On Backspace=true
+Indent On Tab=true
+Indent On Text Paste=false
+Indentation Mode=normal
+Indentation Width=4
+Keep Extra Spaces=false
+Line Length Limit=10000
+Newline at End of File=true
+On-The-Fly Spellcheck=false
+Overwrite Mode=false
+PageUp/PageDown Moves Cursor=false
+Remove Spaces=1
+ReplaceTabsDyn=true
+Show Spaces=0
+Show Tabs=true
+Smart Home=true
+Swap Directory=
+Swap File Mode=1
+Swap Sync Interval=15
+Tab Handling=2
+Tab Width=4
+Trailing Marker Size=1
+Word Wrap=false
+Word Wrap Column=80
+
+[KTextEditor Editor]
+Encoding Prober Type=1
+Fallback Encoding=ISO 8859-15
+
+[KTextEditor Renderer]
+Animate Bracket Matching=false
+Auto Color Theme Selection=true
+Color Theme=Breeze Dark
+Font=Hack,10,-1,7,50,0,0,0,0,0
+Line Height Multiplier=1
+Show Indentation Lines=false
+Show Whole Bracket Expression=false
+Word Wrap Marker=false
+
+[KTextEditor View]
+Allow Mark Menu=true
+Auto Brackets=true
+Auto Center Lines=0
+Auto Completion=true
+Auto Completion Preselect First Entry=true
+Backspace Remove Composed Characters=false
+Bookmark Menu Sorting=0
+Bracket Match Preview=false
+Chars To Enclose Selection=<>(){}[]'"
+Default Mark Type=1
+Dynamic Word Wrap=true
+Dynamic Word Wrap Align Indent=80
+Dynamic Word Wrap At Static Marker=false
+Dynamic Word Wrap Indicators=1
+Dynamic Wrap not at word boundaries=false
+Enable Tab completion=false
+Fold First Line=false
+Folding Bar=true
+Folding Preview=true
+Icon Bar=false
+Input Mode=0
+Keyword Completion=true
+Line Modification=true
+Line Numbers=true
+Max Clipboard History Entries=20
+Maximum Search History Size=100
+Mouse Paste At Cursor Position=false
+Multiple Cursor Modifier=134217728
+Persistent Selection=false
+Scroll Bar Marks=false
+Scroll Bar Mini Map All=true
+Scroll Bar Mini Map Width=60
+Scroll Bar MiniMap=true
+Scroll Bar Preview=true
+Scroll Past End=false
+Search/Replace Flags=140
+Shoe Line Ending Type in Statusbar=false
+Show Documentation With Completion=true
+Show File Encoding=true
+Show Focus Frame Around Editor=true
+Show Folding Icons On Hover Only=true
+Show Line Count=false
+Show Scrollbars=0
+Show Statusbar Dictionary=true
+Show Statusbar Highlighting Mode=true
+Show Statusbar Input Mode=true
+Show Statusbar Line Column=true
+Show Statusbar Tab Settings=true
+Show Word Count=false
+Smart Copy Cut=true
+Statusbar Line Column Compact Mode=true
+Text Drag And Drop=true
+User Sets Of Chars To Enclose Selection=
+Vi Input Mode Steal Keys=false
+Vi Relative Line Numbers=false
+Word Completion=true
+Word Completion Minimal Word Length=3
+Word Completion Remove Tail=true
+
+[Konfigurator]
+Window Height=680
+Window Maximized=false
+Window Width=900
+
+[KrViewerWindow]
+Window Height=-1
+Window Maximized=true
+Window Width=-1
+
+[Look&Feel]
+Show Hidden=true
+
+[MountMan]
+Last State=\x00\x00\x00\xff\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x82\x00\x00\x00\x06\x01\x01\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\xff\xff\xff\xff\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00`\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x001\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00`\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00H\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00H\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\xe8\x00\x00\x00\x00<
+ShowOnlyRemovable=false
+Window Height=629
+Window Maximized=false
+Window Width=884
+
+[Private]
+NewFolder Completion list=xmas_2022:1,assets:2,lsp:1,config:1,Conjure One - Innovation Zero:1,zargunaught:1,images:1,back:1,002-hacking-final-fantasy-1-on-nes:1,syntaxes:1,taxes_2024:1
+NewFolder History list=taxes_2024,assets,syntaxes,002-hacking-final-fantasy-1-on-nes,back,images,zargunaught,Conjure One - Innovation Zero,config,lsp,xmas_2022
+PopularUrls=file:///home/jeffdw/Documents/,file:///home/jeffdw/code/remman/assets/,file:///home/jeffdw/code/remman/,file:///home/jeffdw/Documents/books/,file:///home/jeffdw/code/nes-sim/,file:///home/jeffdw/code/nes-sim/games/,file:///home/jeffdw/Documents/taxes_2024/,file:///home/jeffdw/code/,smb://10.0.0.15/,smb://10.0.0.15/dropbox/,file:///home/jeffdw/,file:///home/,file:///home/jeffdw/code/remzman/src/,file:///home/jeffdw/code/remzman/,file:///home/jeffdw/code/remzman/assets/,file:///home/jeffdw/code/pixzig/assets/,file:///home/jeffdw/code/digcraft/,file:///home/jeffdw/code/digcraft/assets/,file:///home/jeffdw/code/pixzig/,file:///home/jeffdw/Music/,file:///home/jeffdw/Music/Kevorkian Death Cycle - Collection for Injection/,file:///usr/lib/emscripten/system/include/GLES3/,file:///usr/lib/emscripten/system/include/,file:///,file:///usr/,file:///usr/lib/,file:///usr/lib/emscripten/system/lib/,file:///usr/lib/emscripten/,file:///usr/lib/emscripten/system/lib/libc/,file:///usr/lib/emscripten/system/
+PopularUrlsRank=2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Start Position=68,0
+Start Size=1852,1052
+cmdline history=
+
+[Search]
+ContainsText Completion=
+ContainsText History=
+ExcludeFolderNames=
+ExcludeFolderNamesHistory=
+ExcludeFolderNamesUse=0
+SearchFor Completion=
+SearchFor History=
+Window Height=720
+Window Maximized=false
+Window Width=719
+
+[Search][ResultView]
+AutoResizeColumns=true
+Descending Sort Order=0
+Filter=3
+FilterApplysToDirs=false
+IconSize=22
+Saved State=\x00\x00\x00\xff\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0b\xa8\x07\x00\x00\x00\x06\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x00\x08\x00\x00\x00d\x00\x00\x00\t\x00\x00\x00d\x00\x00\x00\n\x00\x00\x00d\x00\x00\x00\x05\x00\x00\x00d\x00\x00\x00\x07\x00\x00\x00d\x00\x00\x01\x84\x00\x00\x00\x0b\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\xff\xff\xff\xff\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00\x00\x0b\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x001\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00F\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00x\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x001\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\xe8\x00\x00\x00\x00d
+ShowPreviews=false
+Sort Column=0
+
+[Startup]
+Left Side Is Active=true
+Show Cmd Line=false
+Show FN Keys=true
+Show Terminal Emulator=false
+Show status bar=true
+Splitter Sizes=925,923
+State=\x00\x00\x00\xff\x00\x00\x00\x00\xfd\x00\x00\x00\x00\x00\x00\x07<\x00\x00\x03\xcc\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x08\x00\x00\x00\x08\xfc\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x03\x00\x00\x00\x16\x00m\x00a\x00i\x00n\x00T\x00o\x00o\x00l\x00B\x00a\x00r\x01\x00\x00\x00\x00\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x14\x00j\x00o\x00b\x00T\x00o\x00o\x00l\x00B\x00a\x00r\x01\x00\x00\x02|\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1c\x00a\x00c\x00t\x00i\x00o\x00n\x00s\x00T\x00o\x00o\x00l\x00B\x00a\x00r\x01\x00\x00\x03)\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00
+Terminal Emulator Splitter Sizes=100,100
+Vertical Mode=false
+
+[Startup][Left Tab Bar]
+ActiveTab=0
+
+[Startup][Left Tab Bar][Tabs][Tab0]
+PinnedUrl=
+Properties=0
+Type=0
+Url=file:///home/jeffdw/Documents
+
+[Startup][Left Tab Bar][Tabs][Tab0][History]
+CurrentIndex=0
+CurrentItems=Noto_Sans_JP.zip,..,books,1099 Composite and Year-End Summary - 2024_992.PDF,taxes_2024,Documents,remzman,src,main.zig,src,..,assets,digconf.lua
+Entrys=file:///home/jeffdw/Documents,file:///home/jeffdw/Documents/books,file:///home/jeffdw/Documents,file:///home/jeffdw/Documents/taxes_2024,file:///home/jeffdw/Documents,file:///home/jeffdw,file:///home/jeffdw/code,file:///home/jeffdw/code/remzman,file:///home/jeffdw/code/remzman/src,file:///home/jeffdw/code/remzman,file:///home/jeffdw/code/remzman/assets,file:///home/jeffdw/code/remzman,file:///home/jeffdw/code/pixzig/assets
+
+[Startup][Left Tab Bar][Tabs][Tab0][View]
+AutoResizeColumns=true
+Descending Sort Order=0
+Filter=3
+FilterApplysToDirs=false
+IconSize=22
+Saved State=\x00\x00\x00\xff\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0b\xa8\x07\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00d\x00\x00\x00\n\x00\x00\x00d\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x00\x08\x00\x00\x00d\x00\x00\x00\t\x00\x00\x00d\x00\x00\x00\x05\x00\x00\x00d\x00\x00\x03\x8d\x00\x00\x00\x0b\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\xff\xff\xff\xff\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00\x00\x0b\x00\x00\x02t\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x001\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00F\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00q\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x001\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\xe8\x00\x00\x00\x00d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01
+ShowPreviews=false
+Sort Column=0
+
+[Startup][Right Tab Bar]
+ActiveTab=1
+
+[Startup][Right Tab Bar][Tabs][Tab0]
+PinnedUrl=
+Properties=0
+Type=0
+Url=file:///home/jeffdw/code/remman
+
+[Startup][Right Tab Bar][Tabs][Tab0][History]
+CurrentIndex=0
+CurrentItems=,sprites.json,assets,remman,assets,..,assets,digcraft,Farley D. Modern Software Engineering..Build Better..Faster 2022.pdf,Documents,Kevorkian Death Cycle - Collection for Injection,..,Kevorkian Death Cycle - Collection for Injection
+Entrys=file:///home/jeffdw/code/remman,file:///home/jeffdw/code/remman/assets,file:///home/jeffdw/code/remman,file:///home/jeffdw/code,file:///home/jeffdw/code/digcraft,file:///home/jeffdw/code/digcraft/assets,file:///home/jeffdw/code/digcraft,file:///home/jeffdw/code,file:///home/jeffdw/Documents,file:///home/jeffdw,file:///home/jeffdw/Music,file:///home/jeffdw/Music/Kevorkian Death Cycle - Collection for Injection,file:///home/jeffdw/Music
+
+[Startup][Right Tab Bar][Tabs][Tab0][View]
+AutoResizeColumns=true
+Descending Sort Order=0
+Filter=3
+FilterApplysToDirs=false
+IconSize=22
+Saved State=\x00\x00\x00\xff\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0b\xa8\x07\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00d\x00\x00\x00\n\x00\x00\x00d\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x00\x08\x00\x00\x00d\x00\x00\x00\t\x00\x00\x00d\x00\x00\x00\x05\x00\x00\x00d\x00\x00\x04\xdd\x00\x00\x00\x0b\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\xff\xff\xff\xff\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00\x00\x0b\x00\x00\x03\xc4\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x001\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00F\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00q\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x001\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\xe8\x00\x00\x00\x00d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01
+ShowPreviews=false
+Sort Column=0
+
+[Startup][Right Tab Bar][Tabs][Tab1]
+PinnedUrl=
+Properties=0
+Type=0
+Url=file:///home/jeffdw/code/remman/assets
+
+[Startup][Right Tab Bar][Tabs][Tab1][History]
+CurrentIndex=0
+CurrentItems=level1.tmx,assets,remman,docs,..,games,nes-sim,code,jeffdw,Documents,taxes_2024,iep sched k 2024.pdf,taxes_2024
+Entrys=file:///home/jeffdw/code/remman/assets,file:///home/jeffdw/code/remman,file:///home/jeffdw/code,file:///home/jeffdw/code/nes-sim,file:///home/jeffdw/code/nes-sim/games,file:///home/jeffdw/code/nes-sim,file:///home/jeffdw/code,file:///home/jeffdw,file:///home,file:///home/jeffdw,file:///home/jeffdw/Documents,file:///home/jeffdw/Documents/taxes_2024,file:///home/jeffdw/Documents
+
+[Startup][Right Tab Bar][Tabs][Tab1][View]
+AutoResizeColumns=true
+Descending Sort Order=0
+Filter=3
+FilterApplysToDirs=false
+IconSize=22
+Saved State=\x00\x00\x00\xff\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0b\xa8\x07\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00d\x00\x00\x00\n\x00\x00\x00d\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x00\x08\x00\x00\x00d\x00\x00\x00\t\x00\x00\x00d\x00\x00\x00\x05\x00\x00\x00d\x00\x00\x03\x99\x00\x00\x00\x0b\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\xff\xff\xff\xff\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00\x00\x0b\x00\x00\x02\x80\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x001\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00F\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00q\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x001\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\xe8\x00\x00\x00\x00d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01
+ShowPreviews=false
+Sort Column=0
+
+[ViewerModule]
+FirstRun=false
